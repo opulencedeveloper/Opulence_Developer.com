@@ -11,7 +11,7 @@ import Layout from '@/components/layouts/Layout';
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${poppins.variable} font-poppins px-5 md:px-12`}>
+    <main className={`${poppins.variable} font-poppins`}>
       <Layout>
       <Component {...pageProps} />
     </Layout>

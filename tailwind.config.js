@@ -16,6 +16,9 @@ module.exports = {
         // 'montserrat': 'Montserrat',
         poppins: ['var(--font-poppins)', ...fontFamily.sans],
       },
+      fontSize: {
+        'fs1': '0.6rem'
+      },
       colors: {
         "primary": '#024554',
         "primary1": "#ACC2C7",
@@ -23,6 +26,7 @@ module.exports = {
       },
       width: {
         'piw': '62rem',
+        'piw1': '34.2rem',
         "boxw1": '5rem'
       }
     },

@@ -1,7 +1,9 @@
 import SectionOne from "@/components/home/SectionOne";
+import SectionTwo from "@/components/home/SectionTwo";
 
 export default function Home() {
-  return <section className="px-5md:px-12">
+  return <section>
     <SectionOne />
+    <SectionTwo />
   </section>;
 }
