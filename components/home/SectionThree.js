@@ -81,46 +81,8 @@ const SectionTwo = () => {
             </div>
           ))}
         </div>
-        <p className="text-xl">My API's</p>
-        <hr className="border-t-2 my-5 " />
       </div>
-      <div className="flex space-x-8 overflow-x-hidden pl-5 md:pl-12">
-        {contents.map((content) => (
-          <div key={content.content1} ref={content.myref}>
-            <YouTube videoId={videoId} opts={options} />
-              {/* <Image
-                src="/images/g.jpg"
-                alt="call a doctor logo"
-                className="h-72 w-72 rounded-lg"
-                height={376}
-                width={376}
-              /> */}
-          </div>
-        ))}
-      </div>
-      <div className="flex px-5 justify-between md:px-12">
-        <button className="flex items-center px-5 py-3 text-white rounded-md"  onClick={scrollToFirstSection}>
-          <Image
-            src="/images/icon/arrow-right.svg"
-            alt="arrow right icon"
-            className="h-4 w-4 mr-2 rotate-180"
-            width={16}
-            height={16}
-          />
-          Previous
-        </button>
-
-        <button className="flex items-center px-5 py-3 text-white rounded-md" onClick={scrollToLastSection}>
-          Next
-          <Image
-            src="/images/icon/arrow-right.svg"
-            alt="arrow right icon"
-            className="h-4 w-4 ml-2"
-            width={16}
-            height={16}
-          />
-        </button>
-      </div>
+      
     </>
   );
 };

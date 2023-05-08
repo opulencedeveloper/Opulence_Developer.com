@@ -42,9 +42,9 @@ const SectionOne = () => {
           />
         </button>
       </div>
-    <div class=" py-6 bg-primary1 text-black text-xl">
-        <div class="inline-block overflow-hidden">
-          <marquee class="my-marquee space-x-8 flex items-center">
+    <div className=" py-6 bg-primary1 text-black text-xl">
+        <div className="inline-block overflow-hidden">
+          <marquee className="my-marquee space-x-8 flex items-center">
             <span>React.js</span>
             <span>Node.js</span> <span>Next.js</span>
             <span>Express.js</span> <span>MongoDB</span> <span>Mongoose</span>
