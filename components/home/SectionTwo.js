@@ -42,7 +42,7 @@ const SectionTwo = () => {
     <>
       <div className="px-5 mt-32 md:px-12">
         <p className="text-xl">Featured Projects</p>
-        <div className="border-primary1 border-t-2 flex justify-center mt-5 items-center space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
+        <div className="border-primary1 border-t-2 border-opacity-50 flex justify-center mt-5 items-center space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
           {contents.map((content) => (
             <div className="w-96 my-10">
               <div className="relative bg-primary1 flex justify-center rounded-tr-md rounded-tl-md">
@@ -82,7 +82,7 @@ const SectionTwo = () => {
           ))}
         </div>
         <p className="text-xl">My API's</p>
-        <hr className="border-t-2 my-5 " />
+        <hr className="border-t-2 opacity-50 my-5 " />
       </div>
       <div className="flex space-x-8 overflow-x-hidden pl-5 md:pl-12">
         {contents.map((content) => (

@@ -8,6 +8,7 @@ const poppins = Poppins({
 
 import "@/styles/globals.css";
 import Layout from '@/components/layouts/Layout';
+import Footer from '@/components/layouts/Footer';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
       <Component {...pageProps} />
     </Layout>
+    <Footer />
     </main>
   );
 }

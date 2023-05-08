@@ -10,8 +10,8 @@ const MainNavigation = () => {
       <p className="text-right text-fs1 pr-5 italic lg:text-sm">God gives the logic, I write the code</p>
       </div>
       <div className="hidden lg:flex space-x-4 text-lg">
-        <div className="rounded-md flex items-center px-5"><Link href="#">About</Link></div>
-        <div className="border border-primary1 rounded-md flex items-center px-4 py-3"><Link href="#">Resume</Link></div>
+        <div className="rounded-md flex items-center px-5"><Link href="/about">About</Link></div>
+        <div className="border border-primary1 rounded-md flex items-center px-4 py-3"><Link href="/">Resume</Link></div>
       </div>
       <button
           className={`block hamburger lg:hidden focus:outline-none`}
