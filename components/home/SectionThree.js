@@ -1,42 +1,21 @@
 import Image from "next/image";
-import { useRef } from "react";
-import YouTube from 'react-youtube';
 import Socials from "../UI/Socials";
 
-const videoId = "zNv1Jq6IqDQ";
-  const options = {
-    width: 400,
-    height: 300,
-  };
 
 const SectionTwo = () => {
-  const section2Ref = useRef(null);
-  const section1Ref = useRef(null);
-
   const contents = [
     {
       content1: "SpeedKash",
-      myref: section1Ref,
     },
     {
       content1: "SpeedKash",
-      myref: null,
     },{
       content1: "SpeedKash",
-      myref: null,
     },
     {
       content1: "SpeedKash",
-      myref: section2Ref,
     },
   ];
-
-  const scrollToFirstSection = () => {
-    section1Ref.current.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToLastSection = () => {
-    section2Ref.current.scrollIntoView({ behavior: "smooth" });
-  };
 
  
   return (
@@ -102,7 +81,7 @@ const SectionTwo = () => {
       <div className="px-5 pb-10 space-y-5 md:px-12">
         <p className="text-lg">Let's build margic together</p>
         <hr className="border-t-2 my-3 border-primary1 opacity-50" />
-        <p>I really love my work and can't wait to work with you. I am also open to full-time, part-time and contract roles
+        <p>I really love my work and can't wait to work with you. I am also avialable for code debugging and open to full-time, part-time and contract roles
 All you need to do is to send an email or reach me on any of my social media handles and we can get started. I would love to hear about your project.</p>
 <button className="flex items-center bg-black px-5 py-3 text-white rounded-sm">
           Send Message
@@ -115,8 +94,13 @@ All you need to do is to send an email or reach me on any of my social media han
           />
         </button>
       </div>
-      
-      <Socials />
+
+     
+
+
+
+      <div className="px-5 md:px-12"> <Socials /></div>
+     
     </>
   );
 };
