@@ -1,6 +1,15 @@
 import Image from "next/image";
+import React from "react";
+import Typewriter from "typewriter-effect";
 
 const SectionOne = () => {
+  const [text, setText] = React.useState("");
+  const handleTypingDone = () => {
+    const currentText = document.querySelector(
+      ".Typewriter__wrapper"
+    ).textContent;
+    setText(currentText);
+  };
   return (
     <>
       <div className="text-center flex flex-col items-center space-y-8 my-20 text-primary1 px-5 md:px-12 lg:my-40">
@@ -16,7 +25,7 @@ const SectionOne = () => {
             />
           </div>
           <span className="text-3xl lg:text-5xl">
-            <p className="leading-relaxed">
+            <p className="leading-tight">
               What took you so long to find me? I'm{" "}
               <span className="font-bold text-white">Victor Amobi</span> and I
               am a{" "}
@@ -26,11 +35,33 @@ const SectionOne = () => {
             </p>
           </span>
         </div>
-        <p className="max-w-6xl text-base lg:text-xl">
-          I am passionate about improving the lives of others through design and
-          constantly looking to learn new things everyday. I also discuss about
-          tech and designs on Ticktok.
-        </p>
+        <div className="max-w-7xl">
+          {" "}
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .pauseFor(1000)
+                .deleteAll().typeString(
+                  "<span class=\"text-base lg:text-xl\">It's great to finally connect with you.</span>"
+                ).pauseFor(1000)
+                .deleteAll().typeString(
+                  "<span class=\"text-base lg:text-xl\">I can't help but wonder what amazing things we can achieve together now that we've found each other.</span>"
+                )
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString(
+                  '<span class="text-base lg:text-xl">I am passionate about using technology to solve problems and build innovative solutions. With experience in both frontend and backend development, I am skilled in a variety of programming languages and frameworks. I take pride in delivering high-quality, performant code that meets the needs of my clients and users. Browse my portfolio to see some of my recent projects and get in touch to learn more about how I can help bring your ideas to life.</span>'
+                )
+                .start();
+            }}
+            options={{
+              typeSpeed: 100,
+              cursor: '<span class="text-xl">|</span>',
+              html: false,
+            }}
+          />
+        </div>
+
         <button className="flex items-center bg-black px-5 py-3 text-white rounded-md">
           Send Message
           <Image
@@ -42,7 +73,7 @@ const SectionOne = () => {
           />
         </button>
       </div>
-    <div className=" py-6 bg-primary1 text-black text-xl">
+      <div className=" py-6 bg-primary1 text-black text-xl">
         <div className="inline-block overflow-hidden">
           <marquee className="my-marquee space-x-8 flex items-center">
             <span>React.js</span>
