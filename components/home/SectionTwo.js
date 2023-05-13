@@ -15,11 +15,7 @@ const SectionTwo = () => {
 
   const videoIds = [
     { id: "UqOb7JOXNWc", myref: section1Ref },
-    { id: "OFjW-Sjc_VQ", myref: undefined },
-    { id: "OFjW-Sjc_VQ", myref: undefined },
-    { id: "OFjW-Sjc_VQ", myref: undefined },
-    { id: "OFjW-Sjc_VQ", myref: undefined },
-    { id: "OFjW-Sjc_VQ", myref: undefined },
+    { id: "wp1chKaIYbY", myref: undefined },
     { id: "OFjW-Sjc_VQ", myref: section2Ref },
   ];
 
@@ -28,24 +24,45 @@ const SectionTwo = () => {
       name: "Trade Hub",
       type: "Crypto Website",
       imageUrl: "/images/tradehub.png",
+      description: "Stay up-to-date on the latest news and trends in the world of cryptocurrency. Whether you're a seasoned investor or just getting started, this site has something for you."
     },
     {
       name: "Story Reading App",
       type: "E-book",
       imageUrl: "/images/story-book-app.png",
+      description: "A learning tool that helps children develop important literacy skills. With features like word highlighting and pronunciation, kids can practice their reading and comprehension in a fun and engaging way."
+    },
+    {
+      name: "Prep",
+      type: "Interview Guide",
+      imageUrl: "/images/prep.png",
+      description: "With comprehensive guides on topics like interview preparation, common interview questions, and salary negotiation, you'll be well-equipped to impress any interviewer."
     },
     {
       name: "Finance App",
       type: "Fintech",
       imageUrl: "/images/finance-app.png",
+      description: "With a sleek and user-friendly interface, the app makes it easy to stay on top of your finances. You can link your bank accounts, credit cards, and investment accounts, and see all your transactions in one place."
+    },
+    {
+      name: "Dentals",
+      type: "Medicals",
+      imageUrl: "/images/dentals.png",
+      description: "With a clean and intuitive interface, the site is easy to navigate and use. You can learn about our dental services, read about our team of experienced professionals, and even schedule an appointment online."
+    },
+    {
+      name: "Rent Plug",
+      type: "Real Estate",
+      imageUrl: "/images/real-estate.png",
+      description: "With a powerful search engine and filters, you can easily find properties that meet your specific criteria, such as location, price range, and property type. You can also save your favorite properties and receive notifications when new properties that match your preferences become available."
     },
   ];
 
   return (
     <>
       <div className="px-5 mt-32 md:px-12">
-        <p className="text-xl">Featured Projects</p>
-        <div className="border-primary1 border-t-2 border-opacity-50 flex justify-center mt-5 items-center space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
+        <p className="text-xl">Some Websites and Mobile Apps Projects</p>
+        <div className="border-primary1 border-t-2 border-opacity-50 flex justify-center mt-5 space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
           {pageContent.map((content) => (
             <div key={content.imageUrl} className="w-96 my-10">
               <div className="relative bg-primary1 flex justify-center rounded-tr-md rounded-tl-md">
@@ -76,9 +93,8 @@ const SectionTwo = () => {
                     </div>
                   </div>
                 </div>
-                <p>
-                  Enabling users save, take loan and shop for products and
-                  services
+                <p className="text-center">
+                {content.description}
                 </p>
               </div>
             </div>

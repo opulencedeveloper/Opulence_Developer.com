@@ -5,40 +5,45 @@ import Socials from "../UI/Socials";
 const SectionTwo = () => {
   const contents = [
     {
-      content1: "SpeedKash",
-    },
-    {
-      content1: "SpeedKash",
+      name: "RESTful(Node.js)",
+      description: "This API exposes end points for CRUD opeartions, authentication and verification using Express.JS and MongoDB(Mongoose)",
+    imageUrl: "/images/api.jpg"
     },{
-      content1: "SpeedKash",
+      name: "GraphQL(Node.js)",
+      description: "I developed a GraphQL project that efficiently retrieves necessary data from backend services. It provides a streamlined user experience and is more organized and easier to maintain.",
+    imageUrl: "/images/graphql.jpg"
     },
     {
-      content1: "SpeedKash",
+      name: "RESTful API(PHP)",
+      description: "This was written with raw php that exposes end points for simple email sign up and sign in.",
+      imageUrl: "/images/api.jpg"
     },
   ];
-
+  
  
   return (
     <>
       <div className="px-5 mt-32 md:px-12">
-        <p className="text-xl">Featured Projects</p>
-        <div className="border-primary1 border-t-2 border-opacity-50 flex justify-center mt-5 items-center space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
+        <p className="text-xl">Some Open Source Code</p>
+        <div className="border-primary1 border-t-2 border-opacity-50 flex justify-center mt-5 items-start space-x-auto flex-wrap md:justify-evenly 2xl:justify-start space-x-2">
           {contents.map((content) => (
-            <div className="w-96 py-2 space-y-2">
+            <div 
+            key={content.description}
+            className="w-96 py-2 space-y-2">
                 <Image
-                  src="/images/image 4.svg"
+                  src={content.imageUrl}
                   alt="call a doctor logo"
-                  className="h-320 w-piw1"
+                  className="h-320 w-piw1 rounded-tl-2xl rounded-tr-2xl"
                   width={540}
                   height={388}
                 />
-                    <p className="font-light text-xl text-center">IOS vs Android</p>
+                    <p className="font-medium text-xl text-center">{content.name}</p>
                    
                  
-                <p className="text-center text-sm leading-tight">
-                Here I clearly distinguished between IOS and Android Design guidelines. There are serval interactive components and variants contained in this file.
+                <p className="p-auto text-center text-sm leading-tight">
+                {content.description}
                 </p>
-                <button className="flex justify-center border-primary1 border-b-2 border-opacity-50 mx-32 pb-0.5">
+                 <button className="flex items-center border-primary1 border-b-2 border-opacity-50 mx-auto pb-0.5">
                     <p className="text-sm">Open in GitHub</p>{" "}
                     <div className="ml-1">
                       <Image
@@ -49,7 +54,7 @@ const SectionTwo = () => {
                         height={16}
                       />
                     </div>
-                  </button>
+                  </button> 
                   
             </div>
           ))}
@@ -62,27 +67,62 @@ const SectionTwo = () => {
       <div className="px-5 mt-40 mb-28 md:px-12">
         <p className="text-lg">Some brands I've worked with</p>
         <hr className="border-t-2 my-3 border-primary1 opacity-50" />
-        <div className="space-x-auto flex items-start">
-          {contents.map((content) => (
-            <div className="w-40">
+        <div className="space-x-auto flex space-x-3 h-32">
+         
+            <div className="w-52">
                 <Image
-                  src="/images/call-a-doc.svg"
+                  src="/images/logo/best.svg"
                   alt="call a doctor logo"
-                  className="h-14 w-32"
-                  width={128}
-                  height={64}
+                  className="h-24 w-52"
+                  width={208}
+                  height={80}
                 />
                   
             </div>
-          ))}
+            <div className="w-52">
+                <Image
+                  src="/images/logo/optimum.svg"
+                  alt="call a doctor logo"
+                  className="h-24 w-52"
+                  width={208}
+                  height={80}
+                />
+                  
+            </div>
+            <div className="w-52">
+                <Image
+                  src="/images/logo/ud.svg"
+                  alt="call a doctor logo"
+                  className="h-24 w-52 "
+                  width={208}
+                  height={80}
+                  
+                />
+                  
+            </div>
+            <div className="w-52">
+                <Image
+                  src="/images/call-a-doc.svg"
+                  alt="call a doctor logo"
+                  className="h-24 w-52"
+                  width={208}
+                  height={80}
+                />
+                  
+            </div>
         </div>
       </div>
 
       <div className="px-5 pb-10 space-y-5 md:px-12">
         <p className="text-lg">Let's build margic together</p>
         <hr className="border-t-2 my-3 border-primary1 opacity-50" />
-        <p>I really love my work and can't wait to work with you. I am also avialable for code debugging and open to full-time, part-time and contract roles
-All you need to do is to send an email or reach me on any of my social media handles and we can get started. I would love to hear about your project.</p>
+        <p className="leading-loose text-lg font-light">"I'm passionate about creating elegant, efficient solutions to complex problems and I'm excited to bring my skills to your next project. 
+        With experience in both front-end and back-end development, I'm comfortable working with a variety of programming languages and frameworks. From responsive mobile app. and web design to robust server architecture, I have the technical expertise to build scalable, secure systems that meet your needs.
+
+But I don't just focus on the code. As a software engineer, I understand the importance of collaboration, communication, and empathy. I work closely with stakeholders to ensure that I'm delivering the right solution, not just any solution. And I'm always eager to learn more about your business, your goals, and your users.
+
+Whether you're looking for a full-time employee, a part-time consultant, looking for someone to help you debug your code or a contract developer, I'm excited to hear about your project. So don't hesitate to reach out reach me on any of my social media handles - I'm looking forward to working with/for you.
+  and we can get started."</p>
 <button className="flex items-center bg-black px-5 py-3 text-white rounded-sm">
           Send Message
           <Image
@@ -95,11 +135,9 @@ All you need to do is to send an email or reach me on any of my social media han
         </button>
       </div>
 
-     
-
-
-
       <div className="px-5 md:px-12"> <Socials /></div>
+      <div  className="leading-loose pb-10 italic text-2xl font-extralight text-center md:text-3xl">"1's and 0's do not lie"</div>
+
      
     </>
   );

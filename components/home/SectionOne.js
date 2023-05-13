@@ -55,7 +55,7 @@ const SectionOne = () => {
                 .start();
             }}
             options={{
-              typeSpeed: 100,
+              typeSpeed: 1000,
               cursor: '<span class="text-xl">|</span>',
               html: false,
             }}
