@@ -2,14 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+import styles from "./SectionOne.module.css";
+
 const SectionOne = () => {
-  const [text, setText] = React.useState("");
-  const handleTypingDone = () => {
-    const currentText = document.querySelector(
-      ".Typewriter__wrapper"
-    ).textContent;
-    setText(currentText);
-  };
   return (
     <>
       <div className="text-center flex flex-col items-center space-y-8 my-20 text-primary1 px-5 md:px-12 lg:my-40">
@@ -38,16 +33,17 @@ const SectionOne = () => {
         <div className="max-w-7xl">
           {" "}
           <Typewriter
+          
             onInit={(typewriter) => {
               typewriter
-                .pauseFor(1000)
+                .pauseFor(100)
                 .deleteAll().typeString(
                   "<span class=\"text-base lg:text-xl\">It's great to finally connect with you.</span>"
-                ).pauseFor(1000)
+                ).pauseFor(100)
                 .deleteAll().typeString(
                   "<span class=\"text-base lg:text-xl\">I can't help but wonder what amazing things we can achieve together now that we've found each other.</span>"
                 )
-                .pauseFor(1000)
+                .pauseFor(100)
                 .deleteAll()
                 .typeString(
                   '<span class="text-base lg:text-xl">I am passionate about using technology to solve problems and build innovative solutions. With experience in both frontend and backend development, I am skilled in a variety of programming languages and frameworks. I take pride in delivering high-quality, performant code that meets the needs of my clients and users. Browse my portfolio to see some of my recent projects and get in touch to learn more about how I can help bring your ideas to life.</span>'
@@ -55,7 +51,7 @@ const SectionOne = () => {
                 .start();
             }}
             options={{
-              typeSpeed: 1000,
+              typeSpeed: 10,
               cursor: '<span class="text-xl">|</span>',
               html: false,
             }}
@@ -73,7 +69,16 @@ const SectionOne = () => {
           />
         </button>
       </div>
-      <div className=" py-6 bg-primary1 text-black text-xl">
+      <div className={`overflow-hidden py-6 bg-primary1 text-black text-xl ${styles.container}`}>
+      <div className={`inline-block space-x-8 whitespace-nowrap ${styles.textWrapper}`}>
+      <span>React.js</span>
+            <span>Node.js</span> <span>Next.js</span>
+            <span>Express.js</span> <span>MongoDB</span> <span>Mongoose</span>
+            <span>Graphics</span> <span>Arduino</span>
+            <span>IOT</span>
+      </div>
+    </div>
+      {/* <div className=" py-6 bg-primary1 text-black text-xl">
         <div className="inline-block overflow-hidden">
           <marquee className="my-marquee space-x-8 flex items-center">
             <span>React.js</span>
@@ -83,7 +88,7 @@ const SectionOne = () => {
             <span>IOT</span>
           </marquee>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
